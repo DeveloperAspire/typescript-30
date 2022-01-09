@@ -10,6 +10,8 @@ const response = fetch(endpoint)
 console.log(cities);
 
 function findMatches(wordToMatch, cities) {
+
+  if(wordToMatch === '') return;
   return cities.filter((city) => {
     const regex = new RegExp(wordToMatch, "gi");
 
